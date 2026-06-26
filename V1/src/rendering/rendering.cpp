@@ -41,7 +41,7 @@ int rendering::update() {
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"),       1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 
-    // Pro Objekt: eigene Model-Matrix berechnen und zeichnen
+    // For each Objekt: a calculat the matrix dan draw it
     for(const auto& obj : objects) {
         glm::mat4 model = glm::mat4(1.0f);
 
